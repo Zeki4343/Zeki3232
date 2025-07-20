@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Zeki3232</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    input, button {
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      border-radius: 6px;
+      border: none;
+    }
+
+    input {
+      width: 250px;
+    }
+
+    button {
+      background-color: #1e90ff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1c86ee;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gizli Şifre Alanı</h1>
+  <p>Kodu giriniz:</p>
+  <input type="text" id="code" placeholder="Örn: Zeki3232">
+  <button onclick="check()">Göster</button>
+  <div id="result"></div>
+
+  <script>
+    function check() {
+      const input = document.getElementById("code").value.trim();
+      const result = document.getElementById("result");
+      if (input === "Zeki3232") {
+        result.textContent = "Şifre: PBKIBGZKAJ5O6IMISVZP4BTC2M27IVBN";
+        result.style.color = "lime";
+      } else {
+        result.textContent = "Hatalı kod girdiniz.";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
